@@ -45,17 +45,28 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+
+function shakeBall() {
+  console.log("The ball has shaken!");
+   return"will I make it?";
+   
+}
 
 // The answer should come from shaking the ball
-let answer;
-
+function Answer(){
+let answer= "Without a doubt";
+return answer;
+}
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+let checking="very positive";
+return checking;
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
