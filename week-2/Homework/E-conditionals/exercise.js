@@ -8,6 +8,16 @@
 
 var name = "Daniel";
 var danielsRole = "mentor";
+var danielsRole2="student";
+
+if (danielsRole){
+  console.log("Hi, I'm Daniel, I'm a mentor.")
+}else if(danielsRole2) {
+  console.log( "Hi, I'm Daniel, I'm a student.")
+
+}
+
+
 
 /* 
 EXPECTED RESULT
