@@ -2,4 +2,26 @@
 // Write multiple solutions using different syntax (as shown in the README)
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
+function multiplication(num){
+    return num * 100;
+}
+
+var newArry= numbers.map(multiplication);
+console.log(newArry);
+
+var newArry= numbers.map(function multiplication(num){
+    return num * 100;
+});
+
+var newArry=numbers.map(function(num){
+    return num*100;
+})
+
+var newArry=numbers.map(num =>{
+    return num*100;
+} )
+/* arrow function*/
+var newArry=numbers.map(num => num * 100);
+
+console.log(newArry)
 

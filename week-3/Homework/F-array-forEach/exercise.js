@@ -9,6 +9,34 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+function sideEffects(num){ // 3
+
+  const isMultipleOfThree = Number.isInteger(num/3); // true
+ 
+  const isMultipleOfFive = num===5 || num===10;
+  const isFifteen = num===15;
+
+  if(isMultipleOfThree || isMultipleOfFive || isFifteen) {
+    if (isMultipleOfThree){
+      console.log("Fizz");
+    }
+    if(isMultipleOfFive){
+      console.log( "Buzz");
+    }
+    if(isFifteen){
+      console.log("FizzBuzz");
+    }
+  } else {
+    console.log(num);
+  }
+}
+
+
+var damn= arr.forEach(sideEffects);
+
+
+
+
 /* EXPECTED OUTPUT */
 
 /*
