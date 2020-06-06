@@ -39,12 +39,28 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+function destinationsWithin500km(thePlace){
+    if(thePlace.distanceKms<=500)
+    return thePlace.destinationName;
+}
+let destinationNamesWithin500Kms = travelDestinations.filter(destinationsWithin500km);// Complete here
 
-let destinationNamesWithin500Kms = // Complete here
+function ferryTransportation(theDestinaton){
+     return theDestinaton.transportations.includes("ferry");
+}
+let destinationNameReachableByFerry = travelDestinations.find(ferryTransportation);// Complete here
 
-let destinationNameReachableByFerry = // Complete here
+function FurtherThan300km(place){
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+    if(place.distanceKms>300 && place.transportations.includes("train")){
+        console.log(place.destinationName);
+    }
+    
+}
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.forEach(FurtherThan300km);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+
+
 
 
 /*

@@ -3,7 +3,11 @@
 */
 
 // WRITE CODE BELOW THIS
-
+var kitten={
+    name: "Gilbert",
+    age: 6,
+    color: "black",
+}
 // WRITE CODE ABOVE THIS
 
 console.log(kitten.name);

@@ -39,6 +39,20 @@ let writers = [
   },
 ];
 
+function information (object){
+  const info= `Hi, my name is ${object.firstName} ${object.lastName}. I am ${object.age} years old, and work as a ${object.occupation}.`
+  return info;
+}
+console.log (writers.map(information));
+// const calling=information(writers[0]);
+// console.log(calling);
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+function aliveOrNah(object){
+  if(object.alive === true){
+     return object.firstName;
+ }
+}
+console.log(writers.filter(aliveOrNah));
+

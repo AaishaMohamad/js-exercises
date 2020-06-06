@@ -15,7 +15,7 @@ const languages = {
   polish: "Witamy",
   spanish: "Bienvenido",
   swedish: "Valkommen",
-  welsh: "Croeso",
+  welsh: "Croeso"
 };
 
 /*
@@ -26,9 +26,25 @@ It should default to English if the language is not in your object of languages,
 or in the event of an invalid input.
 */
 
-function greet(language) {
-  //write your code here
+
+function greet(language) { // language -> "GERMAN"
+const languageLowerCased = language.toLowerCase(); // key --> german
+  var includeLan=languages.hasOwnProperty(languageLowerCased); // includeLan --> true
+   
+
+  if (includeLan) {
+    return languages[languageLowerCased]; // [] brackets
+  }
+  
+  return languages.english; // dot notation . languages["english"];
 }
+
+console.log("1: ", greet("irish"), "=== Failte");
+console.log("2: ", greet("GERMAN"), "=== Willkommen");
+console.log("3: ", greet("greek"), "=== Welcome");
+console.log("4: ", greet("blalal"), "=== Welcome");
+console.log("5: ", greet("FLEMISH"), "=== Welgekomen");
+console.log("6: ", greet("Danish"), "=== Velkomst"); // "Danish".toLowerCase() -> "danish"
 
 /*
 Test your function works correctly calling it inside a console.log(), for each one of these cases:

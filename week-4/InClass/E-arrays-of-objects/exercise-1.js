@@ -4,6 +4,7 @@
 3) Filter the persons to return an array with the person younger than 28 years old (hint: use filter).
 */
 
+
 var person1 = {
     name: "Alice",
     age: 25
@@ -25,11 +26,15 @@ WRITE YOUR CODE BELOW
 */
 
 
-var persons = // Complete here
+var persons = [person1, person2,person3]// Complete here
 
-var personNames = // Complete here
+var personNames = ["Alice","Bob","John"]// Complete here
 
-var personsYoungerThan28YearsOld = // Complete here
+
+function youngerthan28(person){
+    return person.age < 28;
+}
+var personsYoungerThan28YearsOld = persons.filter(youngerthan28);// Complete here
 
 
 /*
