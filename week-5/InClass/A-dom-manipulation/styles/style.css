@@ -150,6 +150,9 @@ body {
 #greenBtn {
 	background: #87ca8a
 }
+ a {
+   font-size: larger;
+}
 
 @media screen and (min-width: 992px) {
 
