@@ -109,16 +109,21 @@ theAddbutton.addEventListener("click",createAnUnorderedList);
 
 function createAnUnorderedList(){
     let unorderedList=document.createElement("ul");
+    unorderedList.setAttribute("id", "myUl");
     var parentOfTheAddButton=document.querySelector("#addArticleBtn").parentElement;
     parentOfTheAddButton.appendChild(unorderedList);
     let listElement=document.createElement("li");
     let userInput= document.querySelector(".addArticle").value;
-     listElement.innerText=userInput;
-    unorderedList.appendChild(listElement);
-    let inputSpace=document.querySelector(".addArticle");
-  
+    listElement.innerText=userInput;
+    // unorderedList.appendChild(listElement);
+    // listElement.appendChild(userInput);
+    window.addEventListener("load",function(){
+        /*all user input shoud be a list item of the ul*/
+       let allTheListItems= document.querySelectorAll(listElement)
+       parentOfAllTheListIitems.appendChild(allTheListItems);
+     });
 }
-
-window.addEventListener("load",function(){
-    console.log('page is fully loaded');
-  });
+// var parentOfAllTheListIitems=document.querySelector(listElement).parentElement;
+//         parentOfAllTheListIitems.appendChild(userInput);
+// let inputSpace=document.querySelector(".addArticle");
+ /*( when the add button is clicked add all the list items to one unordered list instead of creating a new one  )*/

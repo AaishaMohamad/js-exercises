@@ -13,9 +13,23 @@
  *      .....
  * </div>
  */
-function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+function getNameAndJobFromTheObject(object){
+let getNAme=object.name;
+let getJob=object.job;
+let theFirstHeading=document.createElement("h1");
+theFirstHeading.innerText=getNAme;
+let content = document.querySelector("#content");
+  content.appendChild(theFirstHeading);
+  let secondHeading=document.createElement("h2");
+  secondHeading.innerText=getJob;
+  content.appendChild(secondHeading);
 }
+function exerciseOne(arrayOfPeople) {
+ return arrayOfPeople.forEach(getNameAndJobFromTheObject);
+    
+  };
+  
+
 
 /**
  *
@@ -24,9 +38,26 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
-  //Write your code in here
+function creatingListItems(Value){
+  let makeItAListItem=document.createElement("li");
+  makeItAListItem.innerText=Value;
+  document.getElementById("shoppingList").appendChild(makeItAListItem);
+  // unorderedList.appendChild(makeItAListItem);
+
+
 }
+function exerciseTwo(shopping) {
+  let unorderedList=document.createElement("ul");
+  unorderedList.setAttribute("id","shoppingList")
+  let content = document.querySelector("#content");
+  content.appendChild(unorderedList);
+return shopping.forEach(creatingListItems);
+};
+ 
+
+
+  //Write your code in here
+
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -57,7 +88,39 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+function aSingleBook(book){
+  let aParagraph=document.createElement("p");
+  aParagraph.innerText=book.title + book.author;
+  let bookCover=document.createElement("img");
+  bookCover.alt="bookCover";
+  let makeItAListItem=document.createElement("li");
+  makeItAListItem.style.display="flex";
+  makeItAListItem.style.flexDirection="column"
+  makeItAListItem.innerText=aParagraph;
+ makeItAListItem.appendChild(aParagraph);
+ makeItAListItem.appendChild(bookCover);
+ document.getElementById("favBooks").appendChild(makeItAListItem);
+ if(book.title==="The Design of Everyday Things"){
+  bookCover.src="https://images-na.ssl-images-amazon.com/images/I/41bWcNdTGmL._SX330_BO1,204,203,200_.jpg";
+ }else if(book.title==="The Most Human Human"){
+  bookCover.src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg";
+ }else if (book.title==="The Pragmatic Programmer"){
+ bookCover.src="https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg";
+} 
+if(book.alreadyRead===true) {
+  return makeItAListItem.style.backgroundColor="green";
+}
+return makeItAListItem.style.backgroundColor="red";
+}
+
+
 function exerciseThree(books) {
+  let unorderedList=document.createElement("ul");
+  unorderedList.setAttribute("id","favBooks");
+  unorderedList.style.display="flex";
+  unorderedList.style.justifyContent="space-around";
+  document.body.appendChild(unorderedList);
+   return books.forEach(aSingleBook);
   //Write your code in here
 }
 
