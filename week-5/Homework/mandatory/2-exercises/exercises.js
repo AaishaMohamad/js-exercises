@@ -77,7 +77,7 @@ return shopping.forEach(creatingListItems);
             title: "The Pragmatic Programmer",
             author: "Andrew Hunt",
             alreadyRead: true
-        }
+        }  
     ];
 
     Iterate through the array of books.
@@ -96,7 +96,7 @@ function aSingleBook(book){
   let makeItAListItem=document.createElement("li");
   makeItAListItem.style.display="flex";
   makeItAListItem.style.flexDirection="column"
-  makeItAListItem.innerText=aParagraph;
+  
  makeItAListItem.appendChild(aParagraph);
  makeItAListItem.appendChild(bookCover);
  document.getElementById("favBooks").appendChild(makeItAListItem);
