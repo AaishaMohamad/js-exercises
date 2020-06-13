@@ -115,15 +115,4 @@ function createAnUnorderedList(){
     let listElement=document.createElement("li");
     let userInput= document.querySelector(".addArticle").value;
     listElement.innerText=userInput;
-    // unorderedList.appendChild(listElement);
-    // listElement.appendChild(userInput);
-    window.addEventListener("load",function(){
-        /*all user input shoud be a list item of the ul*/
-       let allTheListItems= document.querySelectorAll(listElement)
-       parentOfAllTheListIitems.appendChild(allTheListItems);
-     });
 }
-// var parentOfAllTheListIitems=document.querySelector(listElement).parentElement;
-//         parentOfAllTheListIitems.appendChild(userInput);
-// let inputSpace=document.querySelector(".addArticle");
- /*( when the add button is clicked add all the list items to one unordered list instead of creating a new one  )*/
