@@ -5,12 +5,13 @@ output.
 Why is the bug happening? How do we fix it?
 */
 
-function capitaliseName(name){
+function capitalizeName(name){
     return name.toUpperCase();
 }
 
 let myName = "santanu";
 
-capitaliseName(myName);
 
-console.log(myName);
+let nameInCapital= capitalizeName(myName);
+
+console.log(nameInCapital);

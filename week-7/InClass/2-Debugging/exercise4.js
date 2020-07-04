@@ -10,7 +10,10 @@ modify the code to do this
 */
 
 function capitalise(customer){
+    if( typeof customer==="string"){
     return customer.toUpperCase();
+    }
+    return "NO VALUE"
 }
 
 const messyNames = ["Sundar", "reshma", true, "Maria", "Shantanu", 5 ];

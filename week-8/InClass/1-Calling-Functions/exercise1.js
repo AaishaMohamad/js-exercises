@@ -18,6 +18,6 @@ function greet(name){
 let myName = "Marissa";
 
 // ONLY CHANGE CODE ON LINE 21
-let greeting = greet();
+let greeting = greet("fml");
 
 console.log(greeting);

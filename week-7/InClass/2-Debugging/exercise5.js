@@ -17,4 +17,4 @@ const ages = [17, 26, 4, 18, 7, 12, 31];
 
 let voterAges = ages.filter(canVote);
 
-console.log(ages);
+console.log(voterAges);

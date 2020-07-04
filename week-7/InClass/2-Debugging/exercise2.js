@@ -13,4 +13,4 @@ let myFirstName = "Safra";
 
 let mySurname = "Catz";
 
-greet(myFirstName);
+greet(myFirstName,mySurname);

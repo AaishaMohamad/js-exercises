@@ -20,6 +20,6 @@ let yearIWasBorn = 1982;
 let thisYear = 2020;
 
 // ONLY CHANGE CODE ON LINE 23
-let myAge = calculateAge(thisYear, yearIWasBorn);
+let myAge = calculateAge(yearIWasBorn,thisYear);
 
 console.log(myAge);

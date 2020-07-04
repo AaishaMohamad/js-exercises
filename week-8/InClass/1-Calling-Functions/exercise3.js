@@ -20,6 +20,6 @@ let customerFirstName = "John";
 let customerSurname = "Legere";
 
 // ONLY CHANGE CODE ON LINE 23
-let customerFullName = fullName(customerFirstName);
+let customerFullName = fullName("Sam", "Iam");
 
 console.log(customerFullName);

@@ -1,4 +1,29 @@
-function setAlarm() {}
+var timeInSeconds=10;
+var alarmInterval;
+
+function setAlarm() {
+  clearInterval(alarmInterval);
+  var inputField=document.getElementById("alarmSet");
+  timeInSeconds=inputField.value;
+  alarmInterval=setInterval(checkAlarm, 1000);
+}
+
+
+function checkAlarm(){
+  timeInSeconds= timeInSeconds-1;
+  if(timeInSeconds===0){
+   clearInterval(alarmInterval);
+   playAlarm();
+  }
+  updateTimeRemaining();
+}
+
+function updateTimeRemaining(){
+  var timeRemainingField=document.getElementById("timeRemaining");
+  timeRemainingField.innerText="Time Remaining: 00:"+timeInSeconds;
+}
+
+
 
 // DO NOT EDIT BELOW HERE
 

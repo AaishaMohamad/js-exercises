@@ -5,8 +5,9 @@ ONLY change the code inside the calculateArea function
 */
 
 function calculateArea(x, y){
+    let multiplication=x*y;
+    return multiplication;
     // write your code here
-
 }
 
 let width = 5;
