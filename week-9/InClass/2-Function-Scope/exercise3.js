@@ -1,6 +1,6 @@
 //without running the code - think what the output will be - write down your answer first!
 //then run it and verify your answer
-
+/*holla, hi mimi, shalom awet.*/
 function greetOnce(name) {
   let greeting = "Hi ";
   console.log(greeting + name);

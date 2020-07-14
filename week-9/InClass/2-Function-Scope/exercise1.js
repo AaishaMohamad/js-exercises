@@ -6,4 +6,4 @@ function greetUser(name) {
 }
 
 greetUser("Naima");
-console.log(greeting);
+

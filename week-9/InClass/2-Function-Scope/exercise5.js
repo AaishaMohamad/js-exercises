@@ -20,3 +20,5 @@ function sayGoodbye(name) {
 }
 
 sayGoodbye("Gianluca");
+
+/*hi etzali, Au revoir Emilia*/
